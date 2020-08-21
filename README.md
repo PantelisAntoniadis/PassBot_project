@@ -77,29 +77,29 @@ Project folders '../passbot_project' :
 
 1. Activate virtual environment. 
 
-2. cd passbot
+2. cd passbot  
 	Use `rasa train` to train a model.
 
-3. Then, to run, first set up your action server in one terminal window:
-	'rasa run actions' 
+3. Then, to run, first set up your action server in one terminal window:  
+	'rasa run actions'  
 		
-	There are some custom actions that require connections to external services.
-	For these to run you would need to have your own Gmail account for passbot.
-	First, in 'actions.py' file fill the credentials for mysql database and gmail account and save it.
+	There are some custom actions that require connections to external services.  
+	For these to run you would need to have your own Gmail account for passbot.  
+	First, in 'actions.py' file fill the credentials for mysql database and gmail account and save it.  
 
-4. In another window, run the bot:
-	'rasa shell'
-	Then talk to the bot in greek.
+4. In another window, run the bot:  
+	'rasa shell'  
+	Then talk to the bot in greek.  
 
-5. If you would like to run Passbot on your website, you can use the 'webchat' folder or follow the 
-	instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.
+5. If you would like to run Passbot on your website, you can use the 'webchat' folder or follow the  
+	instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.  
 	
-	5a. Replace the command 4 with : 
-		'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'
-	5b. Then from the 'webchat' folder run :
-		'python -m http.server 8000'
-	5c. Run Chatbot from browser: 
-		http://Your_web_site:8000/index.html
+	5a. Replace the command 4 with :  
+		'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'  
+	5b. Then from the 'webchat' folder run :  
+		'python -m http.server 8000'  
+	5c. Run Chatbot from browser:  
+		http://Your_web_site:8000/index.html  
 
 
 ## Overview of the files
