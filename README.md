@@ -1,12 +1,12 @@
 <h1 align="center">PassBot Chatbot 💬</h1>
 <h5 align="center">
- A Ahatbot for greek Passport Issuance <a href="http://195.251.209.218:8000/index.htm">PassBot</a>.
+A Ahatbot for greek Passport Issuance <a href="http://195.251.209.218:8000/index.html">PassBot</a>.
 </h5>
 <br />
 <br />
 
 <div align="center">
-<img align="center" src="https://cdn.pixabay.com/photo/2013/07/12/13/53/police-officer-147501_960_720.png" alt="demonstration">
+<img align="center" src="https://cdn.pixabay.com/photo/2013/07/12/13/53/police-officer-147501_960_720.png" width="250" height="350" alt="demonstration">
 </div>
 
 
