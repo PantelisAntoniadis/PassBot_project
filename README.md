@@ -12,10 +12,9 @@ A Chatbot for greek Passport Issuance <a href="http://195.251.209.218:8000/index
 # PassBot_project
 RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
 
-<div align="center">
-<img align="left" src="./Sample.gif" alt="demonstration">
+<div align="left">
+<img align="center" src="./Sample.gif" alt="demonstration">
 </div>
-
 
 ## Ιntroduction
 Το παρόν chatbot (PassBot) έχει δημιουργηθεί στο πλαίσιο Διπλωματικής Εργασίας με θέμα 'Ανάπτυξη Chatbot για την έκδοση Διαβατηρίου' 
