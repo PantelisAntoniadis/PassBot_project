@@ -9,12 +9,12 @@ A Chatbot for greek Passport Issuance <a href="http://195.251.209.218:8000/index
 <img align="center" src="https://cdn.pixabay.com/photo/2013/07/12/13/53/police-officer-147501_960_720.png" width="250" height="350" alt="PassBot">
 </div>
 
-<div align="center">
-<img align="center" src="./sample.gif" width="250" height="350" alt="demonstration">
-</div>
-
 # PassBot_project
 RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
+
+<div align="center">
+<img align="center" src="./Sample.gif" alt="demonstration">
+</div>
 
 ## Ιntroduction
 Το παρόν chatbot (PassBot) έχει δημιουργηθεί στο πλαίσιο Διπλωματικής Εργασίας με θέμα 'Ανάπτυξη Chatbot για την έκδοση Διαβατηρίου' 
