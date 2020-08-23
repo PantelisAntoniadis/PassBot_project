@@ -16,6 +16,7 @@ RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
 <img align="left" src="./Sample.gif" alt="demonstration">
 </div>
 
+
 ## Ιntroduction
 Το παρόν chatbot (PassBot) έχει δημιουργηθεί στο πλαίσιο Διπλωματικής Εργασίας με θέμα 'Ανάπτυξη Chatbot για την έκδοση Διαβατηρίου' 
 του μεταπτυχιακού φοιτητή Αντωνιάδη Παντελή, του τμήματος 'Μεταπτυχιακή Εξειδίκευση στα Πληροφοριακά Συστήματα (ΠΛΣ)' του Ελληνικού 
