@@ -13,7 +13,7 @@ A Chatbot for greek Passport Issuance <a href="http://195.251.209.218:8000/index
 RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
 
 <div align="center">
-<img align="center" src="./Sample.gif" alt="demonstration">
+<img align="left" src="./Sample.gif" alt="demonstration">
 </div>
 
 ## Ιntroduction
