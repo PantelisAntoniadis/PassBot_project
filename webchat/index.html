@@ -1,0 +1,217 @@
+<html lang="el">
+
+<header>
+	<title> EAP-Chatbot </title>
+</header>
+
+<head>
+<!--    <meta charset="utf-8"> -->
+<style type="text/css">
+	body { /*background-image: url('static/img/passport_photo.jpg');
+		   background-position: 100px 120px;
+		   background-repeat: no-repeat;*/
+		   background-color: #92a8d1;
+		   overflow: auto;	     
+		   }3
+	h3 {background-color:#F2F3F4}
+	.rw-conversation-container .rw-message{ 
+		font-size: 15px;
+	}
+	.rw-conversation-container .rw-sender{ 
+		font-size: 15px;
+	}
+	footer {
+    	display: flex;
+    	padding: 5px;
+    	color: black;
+	}
+
+	.modal {
+ 		display: none;
+  		position : fixed;
+  		z-index: 1;
+  		padding-top: 50px;
+		left: 0;
+  		top: 0;
+  		width: 100%;
+  		height: 100%;
+		overflow-y: initial;
+  		background-color: rgb(0,0,0);
+  		background-color: rgba(0,0,0,0.4)
+	}
+
+	.modal-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 20px;
+		width: 80%;
+		word-wrap: break-word;
+	}
+
+	.modal-body {
+		height: 70%;
+    	overflow-y: auto;
+	}
+
+	.close {
+		color: #aaaaaa;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	}
+
+	.close:hover, .close:focus {
+  		color: #000;
+  		text-decoration: none;
+  		cursor: pointer;
+	}
+
+	span {
+    	cursor:pointer;
+	}
+
+	span:hover {
+		color: grey;
+		text-decoration:underline;
+	}
+	
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 70%;
+		width: 70%;
+	}
+</style>
+
+</head>
+
+<body>
+  <a href="https://www.eap.gr/el/" target="_blank" id="bottle" return false;" >
+	<img src = "static/img/LOGO_EAP.png" align=left  border=0 height=38 width=100 alt="Logo Eap">
+  </a>
+  <a href="https://uom.gr/" target="_blank" id="bottle" return false;" >
+	<img src = "static/img/UOMLOGOGR.jpg" align=right  border=0 height=38 width=100 alt="Logo Uom">
+  </a>
+
+  <h3>
+	<center>
+	<font size=4 face=tahoma,verdana color=black>
+	 <i>ΕΛΛΗΝΙΚΟ ΑΝΟΙΚΤΟ ΠΑΝΕΠΙΣΤΗΜΙΟ - Μεταπτυχιακή Εξειδίκευση στα Πληροφοριακά Συστήματατα - ΠΛΣ </i>  <br />     
+	 <i>Διπλωματική εργασία ΑΝΤΩΝΙΑΔΗ ΠΑΝΤΕΛΗ "Ανάπτυξη chatbot για την έκδοση διαβατηρίου" </i>  <br />
+	 <i>Επιβλέπων καθηγητής : ΕΥΘΥΜΙΟΣ ΤΑΜΠΟΥΡΗΣ - Καθηγητής τμήματος εφαρμοσμένης πληροφορικής ΠΑ.ΜΑΚ. </i>
+	</font>
+  </h3>
+
+  <p align="center">
+    <font face=tahoma,verdana>
+	<marquee border="0" width="95%" height="22" style="color: white" font-family: sans-serif>
+     	Η ιστοσελίδα καθώς και το Chatbot της διπλωματικής εργασίας φιλοξενούνται σε Server του τμήματος Εφαρμοσμένης Πληροφορικής του Πανεπιστημίου Μακεδονίας, που παραχωρήθηκε ευγενικά από τον επ. καθ. Ε. Μαμάτα
+	</marquee>
+	</font>
+  </p>
+  
+  <img src="static/img/passport_photo.jpg" alt="passport_photo" class="center">
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+    	<span class="close">&times;</span>
+ 		
+  		<div class="modal-header">
+    		<h3>Δήλωση αποποίησης ευθύνης και απορρήτου</h3>
+		</div>
+        <hr>
+
+		<div class="modal-body">
+    		<p> 
+<p><b><u>Δήλωση αποποίησης ευθύνης</u></b></p> 
+<p><b>Γενικά</b></p> 
+
+<p> Με την είσοδό σας στον παρόντα ιστότοπο και/ή με τη χρήση των πληροφοριών που παρέχονται στον ιστότοπο ή μέσω αυτού συμφωνείτε να δεσμεύεστε από την παρούσα δήλωση αποποίησης ευθύνης.</p> 
+
+<p> <b>Χρήση του ιστότοπου</b></p> 
+<p> Ο παρών ιστότοπος όπως και το chatbot το οποίο είναι ενσωματωμένο σ αυτόν, έχει  δημιουργηθεί στο πλαίσιο Διπλωματικής Εργασίας με θέμα 'Ανάπτυξη Chatbot για την έκδοση Διαβατηρίου' του μεταπτυχιακού φοιτητή Αντωνιάδη Παντελή, του τμήματος 'Μεταπτυχιακή Εξειδίκευση στα Πληροφοριακά Συστήματα (ΠΛΣ)' του Ελληνικού Ανοιχτού Πανεπιστημίου.</p> 
+<p> Τα ανωτέρω (ιστοσελίδα και Chatbot) φιλοξενούνται σε Server του τμήματος Εφαρμοσμένης Πληροφορικής του Πανεπιστημίου Μακεδονίας.</p> 
+<p> Οι σχετικές πληροφορίες για το διαβατήριο που εμφανίζονται στο chatbot έχουν αντληθεί από την επίσημη πύλη της Ελληνικής Αστυνομίας http://www.passport.gov.gr/ καθώς και την αντίστοιχη ελληνική νομοθεσία, και έχουν αναλυθεί αποκλειστικά για ακαδημαϊκούς και ερευνητικούς σκοπούς.  Δεν είναι απαραίτητα ολοκληρωμένες, πλήρεις, ακριβείς ή επικαιροποιημένες και δεν αποτελούν επαγγελματικές ή νομικές συμβουλές.</p> 
+<p> Συνεπώς oι πληροφορίες και η καθοδήγηση που παρέχεται από το chatbot στοχεύουν να συμβάλουν σε ερευνητική εργασία σχετικά με την αποτελεσματικότερη και εξατομικευμένη πληροφόρηση του επισκέπτη και σε καμία περίπτωση οι πληροφορίες αυτές δεν πρέπει να λαμβάνονται υπόψη από τον επισκέπτη της ιστοσελίδας σαν εμπεριστατωμένη πληροφόρηση. </p> 
+<p> Οι διασυνδέσεις με άλλους διαδικτυακούς τόπους (websites) παρέχονται μόνο για πληροφόρηση και εντάσσονται στο ανωτέρω πλαίσιο.</p> 
+
+<p><b>Αποκλεισμός ευθύνης</b></p> 
+<p> Το Ελληνικό Ανοικτό Πανεπιστήμιο, το Πανεπιστήμιο Μακεδονίας και οποιοδήποτε πρόσωπο ενεργεί εξ ονόματός τους, ουδεμία ευθύνη φέρουν για τυχόν προβλήματα που θα ανακύψουν από τη ενδεχόμενη χρήση των πληροφοριών που παρέχονται από το chatbot.</p>  
+
+<p><b><u>Δήλωση περί απορρήτου</u></b></p> 
+<p> Ο παρόν ιστότοπος δεν συλλέγει προσωπικά δεδομένα μέσω των cookies. 
+Κατά την χρήση του chatbot δεν ζητείται κανένα προσωπικό δεδομένο, εκτός της διεύθυνσης  ηλεκτρονικού ταχυδρομείου (email) του επισκέπτη, προκειμένου να αποσταλούν πληροφορίες ενδιαφέροντος του, εφόσον το επιθυμεί. 
+Σε κάθε περίπτωση δεν πραγματοποιείται αποθήκευση και επεξεργασία κανενός στοιχείου προσωπικών δεδομένων.</p> 
+		</p>
+
+    	</div>
+	</div>
+</div>
+
+<footer>
+	<span id="linkButton" style="margin-top:20px;" onclick="openModal()">Δήλωση αποποίησης ευθύνης και απορρήτου</span>
+</footer>
+
+<div id="webchat"></div>
+
+<script>
+	var modal = document.getElementById("myModal");
+	var span = document.getElementsByClassName("close")[0];
+	
+	function openModal() {
+	  modal.style.display = "block";
+	}
+	
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+	
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+<!-- you can add a version tag if you need, e.g for version 0.11.5 https://cdn.jsdelivr.net/npm/rasa-webchat@0.11.5/lib/index.min.js -->
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/greet",
+    customData: {"language": "el"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+<!--    socketUrl: "http://195.251.209.218:5005", -->
+    socketUrl: "https://6e97c972e3e5.ngrok.io",
+    socketPath: "/socket.io/",
+    title: "PassBot",
+    subtitle: "Wellcome to Greek Passport Agent",
+	inputTextFieldHint: "Γράψε το μήνυμά σου...",
+	connectingText: "Waiting for server...",
+	hideWherNotConnected: true,
+	fullScreenMode: false,
+	showfullScreenButton: false,
+	showMessageDate:true,
+<!--	profileAvatar: "https://cdn.pixabay.com/photo/2013/07/12/13/53/police-officer-147501_960_720.png", -->
+	profileAvatar: "static/img/police_avatar.png",
+<!--	openLauncherImage: "https://cdn.pixabay.com/photo/2013/07/12/13/53/police-officer-147501_960_720.png",	-->
+<!--	openLauncherImage: "static/img/police_avatar.png",	-->
+	openLauncherImage: "static/img/Conversation 2 PNG White.png",
+	displayUnreadCount: true, // -->[view](./assets/unread_count_pastille.png)
+	customMessageDelay: (message) => {
+        return 200 + message.length;
+    },
+	params: {
+	  images: {
+	    dims: {
+		  width: 300,
+		  height: 200,
+		}
+	  },
+	  storage: "local"
+	},
+  })
+</script>
+</body>
+
+</html>
