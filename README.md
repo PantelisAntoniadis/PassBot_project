@@ -90,13 +90,13 @@ Project folders '../passbot_project' :
 	'rasa shell'  
 	Then, talk to the bot in greek.  
 
-**6.** If you would like to run Passbot on your website, you can use the 'webchat' folder.  
-	**5a.** Replace the command 5 with :  
-		'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'  
-	**5b.** Then from the 'webchat' folder run :  
-		'python -m http.server 8000'  
-	**5c.** Run Chatbot from your browser:  
-		http://Your_web_site:8000/index.html  
+**6.** If you would like to run Passbot through the website who created for this purpose, you can use the 'webchat' folder.  
+	Replace the command 5 with :  
+	**5a.** 'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'  
+	Then from the 'webchat' folder run :  
+	**5b.** 'python -m http.server 8000'  
+	Run Chatbot from your browser:  
+	**5c.** http://Your_web_site:8000/index.html  
 
    Or you can follow the instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.  
 	
