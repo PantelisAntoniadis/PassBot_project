@@ -63,8 +63,6 @@ RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
 - Χειρισμό 'out of scope' ερωτήσεων.
 - Feedback. Δίνεται κατά την αποχώρηση του χρήστη, εφόσον υπάρχει χαιρετισμός (πχ αντίο) ή μετά από ευχαριστίες του.
 
-Από οποιοδήποτε σημείο του διαλόγου γράφοντας 'Επιλογές' εμφανίζονται με buttons προτεινόμενες επιλογές πληροφόρησης.
-
 
 ## Installation
 
@@ -77,33 +75,31 @@ Project folders '../passbot_project' :
 	In Mysql prompt, run Sql scripts file from 'other_files' folder.
 
 ## To run PassBot:
+1. There are some custom actions that require connections to external services.  
+	You would need to have your own Gmail account for passbot.  
+	In 'actions.py' file fill the credentials for mysql database and gmail account and save it. 
 
 1. Activate virtual environment. 
 
 2. cd passbot  
-	Use `rasa train` to train a model.
+	Use `rasa train` to train a model.  
 
-3. Then, to run, first set up your action server in one terminal window:  
-	'rasa run actions'  
-		
-	There are some custom actions that require connections to external services.  
-	For these to run you would need to have your own Gmail account for passbot.  
-	First, in 'actions.py' file fill the credentials for mysql database and gmail account and save it.  
+3. Then, use 'rasa run actions' to get up your action server in one terminal window.  
 
 4. In another window, run the bot:  
 	'rasa shell'  
-	Then talk to the bot in greek.  
+	Then, talk to the bot in greek.  
 
-5. If you would like to run Passbot on your website, you can use the 'webchat' folder or follow the  
-	instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.  
-	
+5. If you would like to run Passbot on your website, you can use the 'webchat' folder.
 	5a. Replace the command 4 with :  
 		'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'  
 	5b. Then from the 'webchat' folder run :  
 		'python -m http.server 8000'  
-	5c. Run Chatbot from browser:  
+	5c. Run Chatbot from your browser:  
 		http://Your_web_site:8000/index.html  
 
+   Or you can follow the instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.  
+	
 
 ## Overview of the files
 
