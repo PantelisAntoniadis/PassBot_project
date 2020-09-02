@@ -75,27 +75,27 @@ Project folders '../passbot_project' :
 	In Mysql prompt, run Sql scripts file from 'other_files' folder.
 
 ## To run PassBot:
-1. There are some custom actions that require connections to external services.  
+**1.** There are some custom actions that require connections to external services.  
 	You would need to have your own Gmail account for passbot.  
 	In 'actions.py' file fill the credentials for mysql database and gmail account and save it. 
 
-1. Activate virtual environment. 
+**2.** Activate virtual environment. 
 
-2. cd passbot  
+**3.** cd passbot  
 	Use `rasa train` to train a model.  
 
-3. Then, use 'rasa run actions' to get up your action server in one terminal window.  
+**4.** Then, use 'rasa run actions' to get up your action server in one terminal window.  
 
-4. In another window, run the bot:  
+**5.** In another window, run the bot:  
 	'rasa shell'  
 	Then, talk to the bot in greek.  
 
-5. If you would like to run Passbot on your website, you can use the 'webchat' folder.
-	5a. Replace the command 4 with :  
+**6.** If you would like to run Passbot on your website, you can use the 'webchat' folder.  
+	**5a.** Replace the command 5 with :  
 		'python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api --cors "*"'  
-	5b. Then from the 'webchat' folder run :  
+	**5b.** Then from the 'webchat' folder run :  
 		'python -m http.server 8000'  
-	5c. Run Chatbot from your browser:  
+	**5c.** Run Chatbot from your browser:  
 		http://Your_web_site:8000/index.html  
 
    Or you can follow the instructions [here](https://github.com/botfront/rasa-webchat) to place the chat widget on your website.  
