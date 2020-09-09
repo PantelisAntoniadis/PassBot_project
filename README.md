@@ -17,52 +17,48 @@ RASA CHATBOT FOR GREEK PASSPORT ISSUANCE
 </div>
 
 ## Ιntroduction
-Το παρόν chatbot (PassBot) έχει δημιουργηθεί στο πλαίσιο Διπλωματικής Εργασίας με θέμα 'Ανάπτυξη Chatbot για την έκδοση Διαβατηρίου' 
-του μεταπτυχιακού φοιτητή Αντωνιάδη Παντελή, του τμήματος 'Μεταπτυχιακή Εξειδίκευση στα Πληροφοριακά Συστήματα (ΠΛΣ)' του Ελληνικού 
-Ανοιχτού Πανεπιστημίου, κατά το ακαδηματικό έτος 2019-2020.  
-*Επιβλέπων καθηγητής : Ευθύμιος Ταμπούρης - Καθηγητής τμήματος εφαρμοσμένης πληροφορικής του Πανεπιστημίου Μακεδονίας.*
- 
-Η ανάπτυξη του Chatbot έχει πραγματοποιηθεί με το open source framework 'Rasa'.  
-Η σχετική πληροφορία για το διαβατήριο είναι καταχωρημένη σύμφωνα με το ευρωπαϊκό μοντέλο CPSV-AP σε MysQL database, από την οποία πραγματοποιείται on-line ανάκτηση για κάθε ανταπόκριση του ChatBot.  
-Η ιστοσελίδα και το Chatbot φιλοξενούται σε server του τμήματος Εφαρμοσμένης Πληροφορικής του Πανεπιστημίου Μακεδονίας, που παραχωρήθηκε ευγενικά από τον επ.καθηγητή κ.Ε.Μαμάτα.
+This chatbot was developed as part of a master's thesis with the topic: 'Chatbot development for passport issuance'.
+It was built by Pantelis Antoniadis, master's student of the 'Master in Information Systems' department of the Hellenic Open University (HOU), during the 2019-20 academic year.
 
-Το chatbot καλύπτει την παρακάτω πληροφόρηση σχετικά με το διαβατήριο:
-- Τι είναι διαβατήριο.
-- Προϋποθέσεις έκδοσης διαβατηρίου (συνοπτικά/αναλυτικά).
-- Περιπτώσεις έκδοσης διαβατηρίου.
-- Kόστος έκδοσης διαβατηρίου.
-- Διαδικασία έκδοσης.
-- Δικαιολογητικά που απαιτούνται (λίστα).
-- Εξατομικευμένη πληροφόρηση δικαιολογητικών - Κόστους - Εξόδου διαβατηρίου.
-- Τόπος υποβοβολής των δικαιολογητικών.
-- Εύρεση γραφείου διαβατηρίων περιοχής.
-- Εύρεση γραφείων που λειτουργούν Κυριακή.
-- Διάρκεια ισχύος των διαβατηρίων.
-- Επείγουσα έκδοση διαβατηρίου.
-- Απώλεια/κλοπή διαβατηρίου.
-- Στοιχεία που περιλαμβάνει το διαβατήριο.
-- Ακύρωση / Αφαίρεση διαβατηρίου.
-- Νομοθετικό πλαίσιο.
+*Supervisor: Efthimios Tambouris, teacher at the Department of Applied Informatics of the University of Macedonia (UOM)*
 
-Παραπέμπτει στο site των διαβατηρίων της Ελληνικής Αστυνομιας για τις περιπτώσεις:
-- Πορεία αίτησης έκδοσης διαβατηρίου.
-- Πληροφορίες για το e-paravolo.
-- Τεχνικές προδιαγραφές φωτογραφίας.
+The chatbot application is developed using the Rasa open source framework, while all the relevant passport information is described using the CPSV-AP model,
+stored in a MySQL database and retrieved on demand, whenever the bot responds to a user's demand. Both the chatbot and the webpage, which is used to access it in a user-friendly
+way, are hosted in one of the servers of the University of Macedonia, kindly given by E. Mamatas, assistant professor at the Department of Applied Informatics, UOM.
 
-Αποστέλλει και με email, τις σημαντικές πληροφορίες :
-- Εξατομικευμένα δικαιολογητικά - Κόστος - Έξοδος διαβατηρίου.
-- Διαδικασία έκδοσης.
-- Προυποθέσεις έκδοσης.
-- Γραφείο διαβατηρίων περιοχής χρήστη.
-- Ανοικτά Γραφεία Διαβατηρίων την Κυριακή.
-  
-Επιπλέον καλύπτει :
-- Small talk.
-- Χαιρετισμούς.
-- Ευχαριστίες.
-- Χειρισμό 'out of scope' ερωτήσεων.
-- Feedback. Δίνεται κατά την αποχώρηση του χρήστη, εφόσον υπάρχει χαιρετισμός (πχ αντίο) ή μετά από ευχαριστίες του.
+The chatbot covers the following needs for information:
+- What is a passport?
+- Requirements for issuing a passport (briefly/exhaustively)
+- Cases of passport issuance
+- Cost of passport issuance
+- Process of issuing a passport
+- List of supporting evidence
+- Personalized information on issuing a passport
+- Passport offices
+- Nearest passport office
+- Passport validity period
+- Emergent passport issuance
+- Passport loss/theft
+- Passport cancellation
+- Personal data that a passport contains
+- Legislation on passports
 
+Directs the user to the corresponding Greek Police website to get info on:
+- e-paravolo
+- Desired passport photo specs
+- Progress of an application for a passport
+
+Sends an email to the user about:
+- Personalized evidence, issuance costs
+- Process of issuing a passport
+- Requirements for issuing a passport
+- Passport offices / nearest passport office
+
+It also covers:
+- Small talk
+- Greetings/thanksgivings
+- 'Out of scope' question
+- Feedback; When the user says goodbye or thanks the bot, a short feedback session begins
 
 ## Installation
 
