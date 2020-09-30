@@ -492,6 +492,7 @@ FOREIGN KEY(value_identifier_a) 	REFERENCES answerfordoc(identifier) 	ON DELETE 
 
 
 INSERT INTO q_dependson_q VALUES('Q0005', 'Q0002', 'A0005');
+INSERT INTO q_dependson_q VALUES('Q0005', 'Q0002', 'A0007');
 INSERT INTO q_dependson_q VALUES('Q0005', 'Q0002', 'A0008');
 INSERT INTO q_dependson_q VALUES('Q0005', 'Q0002', 'A0009');
 INSERT INTO q_dependson_q VALUES('Q0010', 'Q0002', 'A0005');
@@ -778,13 +779,11 @@ INSERT INTO answerfordoc_ex_ev VALUES('A0006','EV0027');
 INSERT INTO answerfordoc_ex_ev VALUES('A0006','EV0031');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0001');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0003');
-INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0008');
+INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0009');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0011');
-INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0015');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0021');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0022');
 INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0027');
-INSERT INTO answerfordoc_ex_ev VALUES('A0007','EV0031');
 INSERT INTO answerfordoc_ex_ev VALUES('A0008','EV0001');
 INSERT INTO answerfordoc_ex_ev VALUES('A0008','EV0002');
 INSERT INTO answerfordoc_ex_ev VALUES('A0008','EV0009');
