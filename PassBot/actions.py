@@ -22,13 +22,13 @@ import json
 INTENT_DESCRIPTION_MAPPING_PATH = "intent_description_mapping.csv"
 config = {
     'host': 'localhost',
-    'user': 'XXXXX',                    # Mysql user
-    'password': 'XXXXX',                # Password for Mysql user
+    'user': 'pan',
+    'password': '123',
     'database':'cpsv_ap',
 }
 GOOGLE_MAP_ADDRESS = "https://www.google.com/maps/place/"
-LOGIN_EMAIL = "passbot.chatbot@gmail.com"   # Passbot mail account
-PASSWORD = "XXXXXX"                         # Password for Passbot mail account
+LOGIN_EMAIL = "passbot.chatbot@gmail.com"
+PASSWORD = "passbot200!"
 SENDER_EMAIL = "passbot.chatbot@gmail.com"     
 BUTTON_YES = "Ναι ✔" 
 BUTTON_NO = "Όχι, δεν χρειάζεται ✖"
@@ -1113,17 +1113,17 @@ class EvidenceForm(FormAction):
         # Περίπτωση Αρχικής έκδοσης/Ανανέωσης/Αντικατάστασης - Ενήλικος == αποκλεισμός ερώτησης 12-κατ'εξαίρεση έκδοσης μετά από απώλεια-κλοπή
         if (a1 == 'A0001' or a1 == 'A0002' or a1 == 'A0003') and (a2 == 'A0005'):
            return ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6", "answer7", "answer8", "answer9", "answer10", "answer11"]
-        # Περίπτωση Αρχικής έκδοσης/Ανανέωσης/Αντικατάστασης - <12 και 12 ετών == αποκλεισμός ερωτήσεων 5-δακτυλικά αποτυπώματα, 10-ανυπότακτος εξωτερικού, 12-κατ'εξαίρεση έκδοσης μετά από απώλεια-κλοπή
-        elif (a1 == 'A0001' or a1 == 'A0002' or a1 == 'A0003') and (a2 == 'A0006' or a2 == 'A0007') :
+        # Περίπτωση Αρχικής έκδοσης/Ανανέωσης/Αντικατάστασης - <12 == αποκλεισμός ερωτήσεων 5-δακτυλικά αποτυπώματα, 10-ανυπότακτος εξωτερικού, 12-κατ'εξαίρεση έκδοσης μετά από απώλεια-κλοπή
+        elif (a1 == 'A0001' or a1 == 'A0002' or a1 == 'A0003') and (a2 == 'A0006') :
            return ["answer1", "answer2", "answer3", "answer4", "answer6", "answer7", "answer8", "answer9", "answer11"]
-        # Περίπτωση Αρχικής έκδοσης/Ανανέωσης/Αντικατάστασης - 13-14 και >14 ετών == αποκλεισμός ερωτήσεων 10-ανυπότακτος εξωτερικού, 12-κατ'εξαίρεση έκδοσης μετά από απώλεια-κλοπή
-        elif (a1 == 'A0001' or a1 == 'A0002' or a1 == 'A0003') and (a2 == 'A0008' or a2 == 'A0009') :          
+        # Περίπτωση Αρχικής έκδοσης/Ανανέωσης/Αντικατάστασης - =12 και 13-14 και >14 ετών == αποκλεισμός ερωτήσεων 10-ανυπότακτος εξωτερικού, 12-κατ'εξαίρεση έκδοσης μετά από απώλεια-κλοπή
+        elif (a1 == 'A0001' or a1 == 'A0002' or a1 == 'A0003') and (a2 == 'A0007' or a2 == 'A0008' or a2 == 'A0009') :          
            return ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6", "answer7", "answer8", "answer9", "answer11"]
-        # Περίπτωση Απώλειας/κλοπής - <12 και 12 ετών == αποκλεισμός ερωτήσεων 5-δακτυλικά αποτυπώματα, 10-ανυπότακτος εξωτερικού
-        elif (a1 == 'A0004') and (a2 == 'A0006' or a2 == 'A0007') :          
+        # Περίπτωση Απώλειας/κλοπής - <12 == αποκλεισμός ερωτήσεων 5-δακτυλικά αποτυπώματα, 10-ανυπότακτος εξωτερικού
+        elif (a1 == 'A0004') and (a2 == 'A0006') :          
            return ["answer1", "answer2", "answer3", "answer4", "answer6", "answer7", "answer8", "answer9", "answer11", "answer12"]
-        # Περίπτωση Απώλειας/κλοπής - 13-14 και >14 ετών == αποκλεισμός ερώτησης 10-ανυπότακτος εξωτερικού
-        elif (a1 == 'A0004') and (a2 == 'A0008' or a2 == 'A0009') :
+        # Περίπτωση Απώλειας/κλοπής - =12 και 13-14 και >14 ετών == αποκλεισμός ερώτησης 10-ανυπότακτος εξωτερικού
+        elif (a1 == 'A0004') and (a2 == 'A0007' or a2 == 'A0008' or a2 == 'A0009') :
            return ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6", "answer7", "answer8", "answer9", "answer11", "answer12"]
         # Περίπτωση Απώλειας/κλοπής - Ενήλικος == ισχύουν όλες οι ερωτήσεις
         else:   
