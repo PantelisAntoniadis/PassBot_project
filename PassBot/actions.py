@@ -22,13 +22,13 @@ import json
 INTENT_DESCRIPTION_MAPPING_PATH = "intent_description_mapping.csv"
 config = {
     'host': 'localhost',
-    'user': 'pan',
-    'password': '123',
+    'user': 'XXXXX',            # Mysql user
+    'password': 'XXXXX',        # Password for Mysql user
     'database':'cpsv_ap',
 }
 GOOGLE_MAP_ADDRESS = "https://www.google.com/maps/place/"
 LOGIN_EMAIL = "passbot.chatbot@gmail.com"
-PASSWORD = "passbot200!"
+PASSWORD = "ΧΧΧΧΧ"              # Password for Passbot mail account
 SENDER_EMAIL = "passbot.chatbot@gmail.com"     
 BUTTON_YES = "Ναι ✔" 
 BUTTON_NO = "Όχι, δεν χρειάζεται ✖"
